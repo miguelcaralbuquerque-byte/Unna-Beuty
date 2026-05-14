@@ -309,9 +309,24 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(6, 1fr);
             gap: 2rem;
             margin-bottom: 5rem;
+        }
+
+        .services-grid>.service-card:nth-child(1),
+        .services-grid>.service-card:nth-child(2),
+        .services-grid>.service-card:nth-child(3) {
+            grid-column: span 2;
+        }
+
+        /* Container invisível para Brow Lamination e Lash Lifting */
+        .services-grid>.featured-service:nth-child(4) {
+            grid-column: 2 / 4;
+        }
+
+        .services-grid>.featured-service:nth-child(5) {
+            grid-column: 4 / 6;
         }
 
         .service-card {
@@ -1000,7 +1015,7 @@
     <header id="header">
         <div class="container">
             <div class="header-content">
-                <a href="#home" class="logo">Unna Beuty</a>
+                <a href="#home" class="logo">Unna Beauty</a>
 
                 <nav>
                     <ul>
@@ -1041,7 +1056,9 @@
                 <span>& Sofisticação</span>
             </h1>
             <p>
-                Especialista em design de sobrancelhas, Extensão de cílios, HidraGloss, Lash Lifting e Brow Lamination. Realçando sua beleza natural com técnicas avançadas e produtos de alta qualidade.
+                Especialista em Design de Sobrancelhas, Extensão de cílios, HidraGloss, Lash Lifting, Brow Lamination e
+                Brozeamento Artificial. Realçando sua beleza natural com técnicas avançadas e produtos de alta
+                qualidade.
             </p>
             <a href="#servicos" class="cta-button">
                 Conheça Nossos Serviços
@@ -1076,7 +1093,7 @@
                         <h3>Design de Sobrancelhas</h3>
                         <p>Design personalizado, laminação e micropigmentação para realçar seu olhar naturalmente.</p>
                         <ul class="service-features">
-                            <li>Brow Lamination</li>
+                            <li>Coloração</li>
                             <li>Design Personalizado</li>
                             <li>Micropigmentação</li>
                             <li>Henna</li>
@@ -1093,10 +1110,11 @@
                         <h3>Extensão de Cílios</h3>
                         <p>Cílios volumosos e naturais com técnicas avançadas que realçam sua beleza.</p>
                         <ul class="service-features">
-                            <li>Volume Russo</li>
+                            <li>Volume Brasileiro</li>
                             <li>Fio a Fio</li>
                             <li>Mega Volume</li>
                             <li>Manutenção</li>
+                            <li>Efeito Fox</li>
                         </ul>
                     </div>
                 </div>
@@ -1119,6 +1137,39 @@
                         </ul>
                     </div>
                 </div>
+                <div class="service-card featured-service">
+                    <div class="service-image">
+                        <img src="IMG-20260507-WA0015 (2).jpg" alt="Design de Sobrancelhas">
+                    </div>
+                    <div class="service-content">
+                        <h3>Brow Lamination</h3>
+                        <p>Sobrancelhas alinhadas e naturais com brow lamination, design personalizado e técnicas
+                            modernas para valorizar seu olhar com elegância.
+                        </p>
+                        <ul class="service-features">
+                            <li>Alinhamento</li>
+                            <li>Personalização</li>
+                            <li>Definição</li>
+                            <li>Durabilidade</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card featured-service">
+                    <div class="service-image">
+                        <img src="destaque 1.jpeg" alt="Design de Sobrancelhas">
+                    </div>
+                    <div class="service-content">
+                        <h3>Lash Lifting</h3>
+                        <p>Curvatura, hidratação e definição para realçar seus cílios naturalmente.</p>
+                        <ul class="service-features">
+                            <li>Curvatura</li>
+                            <li>Nutrição</li>
+                            <li>Definição</li>
+                            <li>Alongamento</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
 
             <!-- ============================================
@@ -1133,23 +1184,22 @@
 
                     <div class="gallery-grid">
                         <div class="gallery-item">
-                            <img src="WhatsApp Image 2026-04-10 at 19.02.26.jpeg" alt="Resultado Sobrancelhas">
+                            <img src="IMG-20260511-WA0002.jpg" alt="Resultado Sobrancelhas">
                         </div>
                         <div class="gallery-item">
-                            <img src="WhatsApp Image 2026-04-23 at 21.11.52.jpeg" alt="Resultado Cílios">
+                            <img src="IMG-20260511-WA0003.jpg" alt="Resultado Cílios">
                         </div>
                         <div class="gallery-item">
-                            <img src="https://customer-assets.emergentagent.com/job_beauty-essentials-120/artifacts/1oavjfe4_1000109521.jpg"
-                                alt="Resultado Lábios">
+                            <img src="IMG-20260511-WA0005.jpg" alt="Resultado Lábios">
                         </div>
                         <div class="gallery-item">
-                            <img src="WhatsApp Image 2026-04-26 at 14.20.52.jpeg" alt="Resultado">
+                            <img src="WhatsApp Image 2026-04-10 at 19.02.26.jpeg" alt="Resultado">
                         </div>
                         <div class="gallery-item">
-                            <img src="WhatsApp Image 2026-04-26 at 14.20.49.jpeg" alt="Resultado">
+                            <img src="IMG-20260511-WA0004.jpg" alt="Resultado">
                         </div>
                         <div class="gallery-item">
-                            <img src="WhatsApp Image 2026-04-26 at 14.20.52 (2).jpeg" alt="Resultado">
+                            <img src="IMG-20260511-WA0006.jpg" alt="Resultado">
                         </div>
                     </div>
                 </div>
@@ -1162,7 +1212,7 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-content">
-                    <h2>Unna Beuty</h2>
+                    <h2>Unna Beauty</h2>
                     <h3>Beleza Natural & Sofisticação</h3>
                     <p>
                         Especializada em design de sobrancelhas, extensão de cílios e HidraGloss.
@@ -1196,22 +1246,18 @@
                 <div class="about-images">
                     <div class="col">
                         <div class="about-image">
-                            <img src="WhatsApp Image 2026-04-23 at 21.11.52.jpeg"
-                                alt="Sobrancelhas">
+                            <img src="imagem de sobrancelha.jpeg" alt="Sobrancelhas">
                         </div>
                         <div class="about-image">
-                            <img src="WhatsApp Image 2026-04-26 at 14.20.52 (2).jpeg"
-                                alt="Cílios">
+                            <img src="WhatsApp Image 2026-04-27 at 12.29.23.jpeg" alt="Cílios">
                         </div>
                     </div>
                     <div class="col">
                         <div class="about-image">
-                            <img src="https://customer-assets.emergentagent.com/job_beauty-essentials-120/artifacts/1oavjfe4_1000109521.jpg"
-                                alt="Lábios">
+                            <img src="WhatsApp Image 2026-04-27 at 12.26.46.jpeg" alt="Lábios">
                         </div>
                         <div class="about-image">
-                            <img src="WhatsApp Image 2026-04-23 at 21.12.19.jpeg"
-                                alt="Procedimento">
+                            <img src="WhatsApp Image 2026-04-23 at 21.12.19.jpeg" alt="Procedimento">
                         </div>
                     </div>
                 </div>
@@ -1231,8 +1277,7 @@
                 <div class="testimonial-card">
                     <div class="quote-icon">"</div>
                     <div class="testimonial-image">
-                        <img src="WhatsApp Image 2026-04-26 at 14.20.52 (2).jpeg"
-                            alt="Cliente">
+                        <img src="WhatsApp Image 2026-04-26 at 14.20.52 (2).jpeg" alt="Cliente">
                     </div>
                     <p class="testimonial-text">
                         "Eu amei meus cílios, hoje passei máscara só fez realçar mais ainda o trabalho incrível que você
@@ -1245,8 +1290,7 @@
                 <div class="testimonial-card">
                     <div class="quote-icon">"</div>
                     <div class="testimonial-image">
-                        <img src="WhatsApp Image 2026-04-23 at 21.11.52.jpeg"
-                            alt="Maria">
+                        <img src="comentario de sobrancelha.jpeg" alt="Maria">
                     </div>
                     <p class="testimonial-text">
                         "Muito obrigada Maria, amei muito, a pele ficou com outra textura, e as sobrancelhas do jeitinho
@@ -1259,8 +1303,7 @@
                 <div class="testimonial-card">
                     <div class="quote-icon">"</div>
                     <div class="testimonial-image">
-                        <img src="WhatsApp Image 2026-04-10 at 18.41.10.jpeg"
-                            alt="Ana">
+                        <img src="comentario de extensaode cilios.jpeg" alt="Ana">
                     </div>
                     <p class="testimonial-text">
                         "Você arrasa sempre, obrigada por melhorar ainda mais minha autoestima com esses cílios
@@ -1380,7 +1423,7 @@
         <div class="    container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <h3>Unna Beuty</h3>
+                    <h3>Unna Beauty</h3>
                     <p>Realçando sua beleza natural com técnicas avançadas e atendimento personalizado.</p>
                     <div class="social-links">
                         <a href="@mariaalbuquerqueofficial" target="_blank" aria-label="Instagram">📷</a>
@@ -1414,14 +1457,15 @@
                     <ul>
                         <li>+55 (11) 93270-1343</li>
                         <li>Endereço do Studio <br>
-                            Portal dos Ipês-Rua das Orquideas-633</li>
+                        </li>
+                        <link rel="stylesheet" href="https://maps.app.goo.gl/KbwgGeTPrLcqfP1Q8?g_st=aw">
                         <li></li>
-                    </ul>
+                    </ul>Portal dos Ipês-Rua das Orquideas-633
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>© 2026 Unna Beuty. Feito com ❤️ para você</p>
+                <p>© 2026 Unna Beauty. Feito com ❤️ para você</p>
                 <p>Ter - Sáb: 9h às 19h</p>
             </div>
         </div>
